@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forge Vision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>⚡ Forge Vision</h1>
+    <p class="subtitle">Create AI Images Instantly</p>
+
+    <!-- PROMPT BOX -->
+    <div class="card">
+
+        <textarea id="prompt" placeholder="✨ Describe your image..."></textarea>
+
+        <button id="generateBtn">✨ Generate Image</button>
+
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading" class="hidden">Generating...</div>
+
+    <!-- RESULT -->
+    <div id="result" class="hidden">
+        <h2>Generated Image</h2>
+        <img id="generatedImage">
+        <br>
+        <a id="downloadBtn" download>⬇ Download</a>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
